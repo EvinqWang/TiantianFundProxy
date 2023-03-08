@@ -1,0 +1,20 @@
+version: "3.0"
+
+services:
+  tiantianfundproxy:
+    container_name: tiantianfundproxy
+    image: node/tiantianfundproxy
+    # build:
+    #   context: server
+    #   dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    restart: on-failure
+    # volumes:
+    #   - ./server/node_modules:/usr/src/node-app/eggjs-server/node_modules
+    # networks:
+    #   internal:
+    #     ipv4_address: 172.25.1.11
+
+
+
