@@ -85,4 +85,5 @@ after_script:
     - if [ $(docker ps -aq --filter name= node/tiantianFundProxy) ]; then docker rm -f node/tiantianFundProxy;fi
     # 通过镜像启动容器，并把本机8000端口映射到容器8000端口
   tags:   # 此行是新增的
-    - common-sahred-runner   # 此行是新增的
+    # - common-sahred-runner   # 此行是新增的
+    - runner-for-egg-sever   # 此行是新增的
