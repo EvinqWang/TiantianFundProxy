@@ -75,6 +75,6 @@ after_script:
     - whoami
     - pwd
     - ls
-    # - .ci/deploy-docker.sh test
+    - .ci/deploy-docker.sh test
   tags:   # 此行是新增的
     - common-sahred-runner   # 此行是新增的
