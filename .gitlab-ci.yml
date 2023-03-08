@@ -23,7 +23,6 @@ before_script:
   - echo "HOME='${HOME}'"
   - node -v 
   - npm -v
-  - git status
   - echo "CI_PIPELINE_SOURCE=$CI_PIPELINE_SOURCE"
   - echo "CI_COMMIT_BRANCH=$CI_COMMIT_BRANCH"
   - echo "BUILD_ENV=$BUILDENV"
