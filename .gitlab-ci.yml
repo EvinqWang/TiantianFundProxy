@@ -1,5 +1,8 @@
 # image: node
 
+# 使用docker镜像
+image: docker:lates
+
 stages:
     # - test
     # - build
