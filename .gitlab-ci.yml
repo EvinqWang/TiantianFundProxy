@@ -87,5 +87,5 @@ after_script:
     # - docker run -d -p 5000:5000 --name tiantianfundproxy node/tiantianfundproxy
     - docker-compose up -d
   tags:   # 此行是新增的
-    - common-sahred-runner   # 此行是新增的
+    - common-sahred-runner   # 共享的docker runner
     # - node-server-shared-shell
