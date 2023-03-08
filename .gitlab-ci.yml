@@ -1,7 +1,7 @@
 # image: node
 
 # 使用docker镜像
-image: docker:lates
+image: docker:latest
 
 stages:
     # - test
@@ -87,5 +87,5 @@ after_script:
     # - docker run -d -p 5000:5000 --name tiantianfundproxy node/tiantianfundproxy
     - docker-compose up -d
   tags:   # 此行是新增的
-    # - common-sahred-runner   # 此行是新增的
-    - node-server-shared-shell
+    - common-sahred-runner   # 此行是新增的
+    # - node-server-shared-shell
