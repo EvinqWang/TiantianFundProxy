@@ -1,0 +1,81 @@
+# image: node
+
+stages:
+    # - test
+    # - build
+    - deploy
+
+# cache:
+#     - key:
+#           files:
+#               - package-lock.json
+#       paths:
+#           - node_modules/
+#       policy: pull-push
+    # - paths:
+    #       - Proto
+    #   policy: pull-push
+
+before_script:
+  - echo "Before script section"
+  - pwd 
+  - ls
+  - echo "HOME='${HOME}'"
+  - node -v 
+  - npm -v
+  - git status
+  - echo "CI_PIPELINE_SOURCE=$CI_PIPELINE_SOURCE"
+  - echo "CI_COMMIT_BRANCH=$CI_COMMIT_BRANCH"
+  - echo "BUILD_ENV=$BUILDENV"
+  - echo "TARSBRANCH=$TARSBRANCH"
+
+after_script:
+  - echo "After script section"
+  - echo "For example you might do some cleanup here"
+
+# # submodue运行策略
+# variables:
+#     GIT_SUBMODULE_STRATEGY: recursive
+
+# 单元测试:
+#   stage: test
+#   script:
+#     - echo "Do a test here"
+#     - echo "For example run a test suite"
+#     - date
+#     - npm i --verbose
+#     - ls
+#     - date
+#   tags:   # 此行是新增的
+#     - evinq-gitlab-runner   # 此行是新增的
+
+
+# 编译:
+#   stage: build
+#   script:
+#     - echo "Do your build here"
+#     - echo "environment is $node_ENV"
+#     - date
+#     - npm i --needlock
+#     - ls
+#     - npm run build
+#     - date
+#   artifacts:
+#     name: 'vite-vue3-h5-$CI_PIPELINE_ID-$CI_COMMIT_REF_SLUG'
+#     expose_as: vite-vue3-h5
+#     expire_in: 1 weeks
+#     paths:
+#         - dist/
+#   tags:   # 此行是新增的
+#     - evinq-gitlab-runner   # 此行是新增的
+
+部署:
+  stage: deploy
+  script:
+    - echo "Do your deploy  here"
+    - whoami
+    - pwd
+    - ls
+    # - .ci/deploy-docker.sh test
+  tags:   # 此行是新增的
+    - common-sahred-runner   # 此行是新增的
