@@ -84,6 +84,8 @@ after_script:
     # 删除已经在运行的容器
     - if [ $(docker ps -aq --filter name= node/tiantianfundproxy) ]; then docker rm -f node/tiantianfundproxy;fi
     # 通过镜像启动容器，并把本机8000端口映射到容器8000端口
+    - docker run -d -p 5000:5000 --name node/tiantianfundproxy node/tiantianfundproxy
+
   tags:   # 此行是新增的
     # - common-sahred-runner   # 此行是新增的
     - node-server-shared-shell
