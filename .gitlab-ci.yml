@@ -1,5 +1,3 @@
-# image: node
-
 # 使用docker镜像
 image: 1329778364/alpine_node_sshd:docker
 
