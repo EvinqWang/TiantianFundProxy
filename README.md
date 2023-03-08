@@ -59,3 +59,6 @@ pnpm test
 CICD参考 
 
 - https://juejin.cn/post/6844903767117299719
+- 解决 docker in docker 问题， https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-socket-binding
+  > 核心是配置  **volumes**=**[**"/var/run/docker.sock:/var/run/docker.sock"**,**"/cache"**]**
+  >
