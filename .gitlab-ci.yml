@@ -86,4 +86,4 @@ after_script:
     # 通过镜像启动容器，并把本机8000端口映射到容器8000端口
   tags:   # 此行是新增的
     # - common-sahred-runner   # 此行是新增的
-    - runner-for-egg-sever   # 此行是新增的
+    - node-server-shared-shell
