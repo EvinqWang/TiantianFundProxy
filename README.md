@@ -44,19 +44,16 @@ pnpm test
 - 参考 `module/*.js`
 - 参考 `routes/index.js`
 
-
 ### 测试服务
 
 - http://fund.hust.cloud/fundNetList
-
 
 其他数据参考
 
 - https://www.ricequant.com/doc/rqdata/python/fund-mod.html#fund-instruments-%E8%8E%B7%E5%8F%96%E5%9F%BA%E9%87%91%E5%9F%BA%E7%A1%80%E4%BF%A1%E6%81%AF
 
 
-
-CICD参考 
+CICD参考
 
 - https://juejin.cn/post/6844903767117299719
 - 解决 docker in docker 问题， https://docs.gitlab.com/ee/ci/docker/using_docker_build.html#use-docker-socket-binding
