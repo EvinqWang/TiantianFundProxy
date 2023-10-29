@@ -64,9 +64,22 @@ const getModules = () => {
   });
 };
 
+const sse = async (url, params) => {
+  const res = await axios(url, {
+    headers,
+    params: {
+      ...baseData,
+      ...params,
+    },
+    responseType: 'stream',
+  });
+  return res.data;
+};
+
 module.exports = {
   request,
   post,
   jsonp,
   getModules,
+  sse,
 };
