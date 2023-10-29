@@ -8,5 +8,6 @@ module.exports = async (params = {}) => {
   const url =
     'https://fundgz.1234567.com.cn/js/'.concat(params.code, '.js') +
     `?rt=${time}`;
+  console.log(params);
   return request(url, params);
 };
